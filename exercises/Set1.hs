@@ -21,7 +21,9 @@ import Mooc.Todo
 -- Ex 1: define variables one and two. They should have type Int and
 -- values 1 and 2, respectively.
 
+one :: Int
 one = 1
+two :: Int
 two = 2
 
 ------------------------------------------------------------------------------
@@ -29,7 +31,7 @@ two = 2
 -- should take one argument and return it multiplied by two.
 
 double :: Integer -> Integer
-double x = x * two
+double x = x * 2
 
 ------------------------------------------------------------------------------
 -- Ex 3: define the function quadruple that uses the function double
@@ -84,12 +86,12 @@ checkPassword password = if password == "swordfish" || password == "mellon"
 -- Write a function postagePrice that takes the weight of a package
 -- in grams, and returns the cost in credits.
 
-postagePrice :: Int -> Int
+postagePrice :: Integer -> Integer
 postagePrice x = if x > 5000 
                     then 6000
                     else if x <= 500
                             then 250
-                            else x - 200
+                            else x + 300
 
 ------------------------------------------------------------------------------
 -- Ex 8: define a function isZero that returns True if it is given an
@@ -99,7 +101,7 @@ postagePrice x = if x > 5000
 --
 -- Ps. remember, the type of booleans in haskell is Bool
 
-isZero :: Int -> Bool
+isZero :: Integer -> Bool
 isZero 0 = True
 isZero _ = False
 
