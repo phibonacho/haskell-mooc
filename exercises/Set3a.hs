@@ -324,3 +324,4 @@ interpreter'' command (x:y:_) = case command of
     "right" -> Left [x + 1, y]
     "printX" -> Right (show x)
     "printY" -> Right (show y)
+    _ -> Left [x,y]
